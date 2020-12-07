@@ -1,2 +1,2 @@
 # JsLibrary
-JS Logical, Mathematic and useful Library
+JS Logical, easy tools and useful Library
