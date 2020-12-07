@@ -1,9 +1,18 @@
 /*This module isfor mathematical calculations that will help to simplify a lot of work
 for developers*/
 
-class test {
 
+/* Array methods*/
+class CalcArray {
+    constructor() {}
 
-
-
+    averageOfArray(array) {
+        //Algoritm for obtain a average of 1 array.
+        let average = 0;
+        for (let i in array) {
+            average += array[i];
+        }
+        return average / array.length;
+    }
 }
+const calcArray = new CalcArray();
