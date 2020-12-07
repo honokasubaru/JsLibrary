@@ -4,6 +4,7 @@ for developers*/
 
 /* Array methods*/
 class CalcArray {
+    //calculate operations with arrays.
     constructor() {}
 
     averageOfArray(array) {
