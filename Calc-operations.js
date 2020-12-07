@@ -1,9 +1,2 @@
 /*This module isfor mathematical calculations that will help to simplify a lot of work
 for developers*/
-
-class test {
-
-
-
-
-}
