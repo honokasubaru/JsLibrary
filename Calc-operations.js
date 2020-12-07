@@ -1,4 +1,2 @@
-console.log("hola mundo");
-console.log("se ve?");
-console.log("amateratsu");
-console.log("el ataque big bang");
+/*This module isfor mathematical calculations that will help to simplify a lot of work
+for developers*/
