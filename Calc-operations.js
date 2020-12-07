@@ -1,3 +1,3 @@
 console.log("hola mundo");
 console.log("se ve?");
-console.log("Jajaj uwu");
+console.log("Jajaj uwuer");
