@@ -9,7 +9,6 @@ class CalcArray {
 
     averageOfArray(array) {
         //Algoritm for obtain a average of 1 array.
-        console.log(typeof(array));
 
         let average = 0;
         for (let i in array) {
@@ -20,4 +19,3 @@ class CalcArray {
 }
 
 const calcArray = new CalcArray();
-
