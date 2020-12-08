@@ -20,3 +20,4 @@ class CalcArray {
 }
 
 const calcArray = new CalcArray();
+
