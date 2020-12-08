@@ -7,6 +7,14 @@ class CalcArray {
     //calculate operations with arrays.
     constructor() {}
 
+    aditionOfArray(array) {
+        let addArray = 0;
+        for (let i in array) {
+            addArray += array[i];
+        }
+        return addArray;
+    }
+
     averageOfArray(array) {
         //Algoritm for obtain a average of 1 array.
 
@@ -16,6 +24,7 @@ class CalcArray {
         }
         return average / array.length;
     }
+
 }
 
 const calcArray = new CalcArray();
