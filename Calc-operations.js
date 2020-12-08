@@ -9,17 +9,13 @@ class CalcArray {
 
     averageOfArray(array) {
         //Algoritm for obtain a average of 1 array.
-        if (typeof(array) == Object) {
-            let average = 0;
-            for (let i in array) {
-                average += array[i];
-            }
-            return average / array.length;
 
-        } else return console.log("Parameter is not an array");
-
+        let average = 0;
+        for (let i in array) {
+            average += array[i];
+        }
+        return average / array.length;
     }
 }
 
 const calcArray = new CalcArray();
-
