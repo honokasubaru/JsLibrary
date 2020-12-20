@@ -8,6 +8,7 @@ class CalcArray {
     constructor() {}
 
     adition(array) {
+        //Obtain the add of all elements of an array
         let addArray = 0;
         for (let i in array) {
             addArray += array[i];
@@ -16,7 +17,7 @@ class CalcArray {
     }
 
     average(array) {
-        //Algoritm for obtain a average of an array.
+        //Obtain a average of an array.
 
         let average = 0;
         for (let i in array) {
