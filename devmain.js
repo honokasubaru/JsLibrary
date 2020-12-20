@@ -39,11 +39,30 @@ class CalcArray {
 
         return maximun;
     }
+    minimunValue(array) {
+
+        //Obtain minimun value of an array
+
+        let minimun = array[0]
+
+        for (let i in array) {
+
+            if (array[i] < minimun) {
+                minimun = array[i];
+            }
+        }
+        return minimun;
+    }
+
+
+
 
 }
 
 //objects to export. 
 
 const ofArray = new CalcArray();
+console.log(ofArray.minimunValue([4, 2, -1, 2, 12]));
+
 
 //Testing zone.
