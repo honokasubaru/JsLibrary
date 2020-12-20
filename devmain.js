@@ -39,6 +39,7 @@ class CalcArray {
 
         return maximun;
     }
+
     minimunValue(array) {
 
         //Obtain minimun value of an array
@@ -54,15 +55,27 @@ class CalcArray {
         return minimun;
     }
 
+    bubbleSort(array){
+        //sort the array with bubble sorting algorithm 
+        let temp;
 
-
-
+        for (let i = 0; i < array.length;i++) {
+            for (let j = 0; j < array.length-i; j++) {
+                if(array[j]>array[j+1]){
+                    temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;                
+                }                
+            }            
+        }
+        return array;
+    }
 }
 
 //objects to export. 
 
 const ofArray = new CalcArray();
-console.log(ofArray.minimunValue([4, 2, -1, 2, 12]));
+console.log(ofArray.bubbleSort([4, 2, -1, 2, 12]));
 
 
 //Testing zone.
