@@ -54,15 +54,35 @@ class CalcArray {
         return minimun;
     }
 
-
-
-
 }
+
+const quickShort = (array) => {
+    if (array.length <= 1) {
+        return array;
+    }
+
+    var index = array[0];
+
+    var left = [];
+    var right = [];
+
+    for (var i = 1; i < array.length; i++) {
+        array[i] < index ? left.push(array[i]) : right.push(array[i]);
+    }
+
+    return quickShort(left).concat(index, quickShort(right));
+};
+
+
+
 
 //objects to export. 
 
 const ofArray = new CalcArray();
-console.log(ofArray.minimunValue([4, 2, -1, 2, 12]));
+
+
+//Exporting all objects and functions
+
 
 
 //Testing zone.
