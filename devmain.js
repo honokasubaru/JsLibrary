@@ -1,8 +1,12 @@
-//Creator of method for easy tolls
+/*
+Easy tools, simple and usefull library
+*/
+
+
 
 
 /* Arrays tools*/
-/* Array methods*/
+
 class CalcArray {
     //calculate operations with arrays.
     constructor() {}
@@ -54,6 +58,23 @@ class CalcArray {
         return minimun;
     }
 
+
+    generateArray(numberof) {
+
+        let array = [];
+        if (numberof < 1000000) {
+            let generator;
+            console.log(numberof);
+            for (let i = 0; i < numberof; i++) {
+
+                generator = parseInt(Math.random() * 100);
+                array.push(generator);
+            }
+            return array;
+        }
+
+    }
+
 }
 
 const quickShort = (array) => {
@@ -73,12 +94,10 @@ const quickShort = (array) => {
     return quickShort(left).concat(index, quickShort(right));
 };
 
-
-
-
-//objects to export. 
+//Objects to export. 
 
 const ofArray = new CalcArray();
+
 
 
 //Exporting all objects and functions
