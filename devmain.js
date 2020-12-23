@@ -8,11 +8,11 @@ Easy tools, simple and usefull library
 /* Arrays tools*/
 
 class CalcArray {
-    //calculate operations with arrays.
+    //calculate operations and tolls for use with arrays.
     constructor() {}
 
     adition(array) {
-        //Obtain the add of all elements of an array
+        //Obtain the add of all elements of an array 
         let addArray = 0;
         for (let i in array) {
             addArray += array[i];
@@ -61,6 +61,8 @@ class CalcArray {
 
     generateArray(numberof) {
 
+        //Generating an array
+
         let array = [];
         if (numberof < 1000000) {
             let generator;
@@ -78,10 +80,12 @@ class CalcArray {
 }
 
 const quickShort = (array) => {
+
+    //Algorithm quickshort for order arrays
+
     if (array.length <= 1) {
         return array;
     }
-
     var index = array[0];
 
     var left = [];
