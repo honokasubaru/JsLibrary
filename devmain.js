@@ -88,9 +88,16 @@ const quickShort = (array) => {
     var right = [];
 
     for (var i = 1; i < array.length; i++) {
-        array[i] < index ? left.push(array[i]) : right.push(array[i]);
-    }
+        if (array[i] < index) {
 
+            left.push(array[i]);
+
+        } else {
+
+            right.push(array[i]);
+
+        }
+    }
     return quickShort(left).concat(index, quickShort(right));
 };
 
