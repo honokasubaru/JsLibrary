@@ -90,16 +90,12 @@ class CalcArray {
         return object;
     }
 
+
 }
 
+const quicksort = (array) => {
 
-
-
-
-
-const quickShort = (array) => {
-
-    //Algorithm quickshort for order arrays
+    //Algorithm quicksort for order arrays
 
     if (array.length <= 1) {
         return array;
@@ -120,25 +116,48 @@ const quickShort = (array) => {
 
         }
     }
-    return quickShort(left).concat(index, quickShort(right));
+    return quicksort(left).concat(index, quicksort(right));
 };
 
 const bubbleSort = (array) => {
     //sort the array with bubble sorting algorithm 
-    let shortVar;
+    let sortVar;
 
     for (let i = 0; i < array.length; i++) {
         for (let j = 0; j < array.length - i; j++) {
             if (array[j] > array[j + 1]) {
-                shortVar = array[j];
+                sortVar = array[j];
                 array[j] = array[j + 1];
-                array[j + 1] = shortVar;
+                array[j + 1] = sortVar;
             }
         }
     }
     return array;
 }
 
+const binarySearch = (value, array) => {
+
+    //Obtain index of a specific value in an array
+
+    let first = 0; //left endpoint
+    let last = array.length - 1; //right endpoint
+    let position = false;
+    let found = false;
+    let middle;
+
+    while (found === false && first <= last) {
+        middle = Math.floor((first + last) / 2);
+        if (array[middle] == value) {
+            found = true;
+            position = middle;
+        } else if (array[middle] > value) { //if in lower half
+            last = middle - 1;
+        } else { //in in upper half
+            first = middle + 1;
+        }
+    }
+    return position;
+}
 
 //Objects to export. 
 
