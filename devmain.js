@@ -76,8 +76,26 @@ class CalcArray {
         }
 
     }
+    arrayTObject(array) {
+
+        //return an object with index = id of array and value is the argument of array
+
+        let object = {};
+
+        for (let i in array) {
+
+            object[i] = array[i];
+
+        }
+        return object;
+    }
 
 }
+
+
+
+
+
 
 const quickShort = (array) => {
 
@@ -105,9 +123,12 @@ const quickShort = (array) => {
     return quickShort(left).concat(index, quickShort(right));
 };
 
+
+
 //Objects to export. 
 
 const ofArray = new CalcArray();
+console.log(ofArray.arrayTObject(["juan", "brayan", "keila", "amateratsu", "gato"]));
 
 
 
