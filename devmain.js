@@ -90,7 +90,54 @@ class CalcArray {
         return object;
     }
 
+}
 
+class Stack {
+
+    // Does the simulation of a stack with its methods
+
+    constructor() {
+        this.stack = []
+
+    }
+    insertNewElement(element) {
+
+        this.stack.push(element);
+        return this.stack;
+    }
+    deleteElement() {
+        this.stack.pop();
+        return this.stack;
+    }
+    showSize() {
+        return this.stack.length;
+    }
+    viewElements() {
+        return this.stack;
+    }
+
+}
+
+class Queue {
+    //Does the simulation of a queue with its methods
+    constructor() {
+        this.queue = [];
+    }
+
+    insertNewElement(element) {
+
+        this.queue.push(element);
+        return this.queue;
+    }
+    deleteElement() {
+        return this.queue.shift();
+    }
+    showSize() {
+        return this.queue.length;
+    }
+    viewElements() {
+        return this.queue;
+    }
 }
 
 const quicksort = (array) => {
@@ -162,6 +209,8 @@ const binarySearch = (value, array) => {
 //Objects to export. 
 
 const ofArray = new CalcArray();
+const stack = new Stack()
+const queue = new Queue()
 
 
 
