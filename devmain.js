@@ -125,14 +125,14 @@ const quickShort = (array) => {
 
 const bubbleSort = (array) => {
     //sort the array with bubble sorting algorithm 
-    let temp;
+    let shortVar;
 
     for (let i = 0; i < array.length; i++) {
         for (let j = 0; j < array.length - i; j++) {
             if (array[j] > array[j + 1]) {
-                temp = array[j];
+                shortVar = array[j];
                 array[j] = array[j + 1];
-                array[j + 1] = temp;
+                array[j + 1] = shortVar;
             }
         }
     }
@@ -143,7 +143,7 @@ const bubbleSort = (array) => {
 //Objects to export. 
 
 const ofArray = new CalcArray();
-console.log(ofArray.arrayTObject(["juan", "brayan", "keila", "amateratsu", "gato"]));
+
 
 
 
