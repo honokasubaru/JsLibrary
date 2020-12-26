@@ -59,6 +59,7 @@ class CalcArray {
     }
 
 
+
     generateArray(numberof) {
 
         //Generating an array
@@ -140,6 +141,65 @@ class Queue {
     }
 }
 
+class Areas {
+
+    constructor() {
+            this.area = true;
+        }
+        // Areas and perimeters
+
+    circle(radio) {
+
+        this.area = Math.PI * radio ** 2;
+        return this.area;
+    }
+    square(side) {
+        this.area = side ** 2
+        return this.area;
+    }
+    triangule(base, height) {
+        this.area = base * height / 2;
+        return this.area;
+    }
+    rectangule(base, height) {
+        this.area = base * height;
+        return this.area;
+    }
+    rombo(mayorDiagonal, menorDiagonal) {
+        this.area = mayorDiagonal * menorDiagonal / 2;
+        return this.area;
+    }
+    trapecio(mayorBase, menorBase, height) {
+        this.area = mayorBase + menorBase / 2 * height;
+        return this.area;
+    }
+
+    sphere(radio) {
+
+        this.area = 4 * Math.PI * radio ** 2;
+        return this.area;
+
+    }
+    cube(side) {
+
+        this.area = 6 * side ** 2;
+        return this.area;
+    }
+
+    tetrahedron(edge) {
+
+        this.area = 4 * (Math.sqrt(3) / 4 * edge ** 2);
+        return this.area;
+
+    }
+
+}
+
+
+
+
+
+
 const quicksort = (array) => {
 
     //Algorithm quicksort for order arrays
@@ -211,12 +271,12 @@ const binarySearch = (value, array) => {
 const ofArray = new CalcArray();
 const stack = new Stack()
 const queue = new Queue()
-
-
+const areaOf = new Areas();
 
 
 //Exporting all objects and functions
 
 
 
+//Testing zone.
 //Testing zone.
