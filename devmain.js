@@ -92,55 +92,6 @@ class CalcArray {
     }
 
 }
-
-class Stack {
-
-    // Does the simulation of a stack with its methods
-
-    constructor() {
-        this.stack = []
-
-    }
-    insertNewElement(element) {
-
-        this.stack.push(element);
-        return this.stack;
-    }
-    deleteElement() {
-        this.stack.pop();
-        return this.stack;
-    }
-    showSize() {
-        return this.stack.length;
-    }
-    viewElements() {
-        return this.stack;
-    }
-
-}
-
-class Queue {
-    //Does the simulation of a queue with its methods
-    constructor() {
-        this.queue = [];
-    }
-
-    insertNewElement(element) {
-
-        this.queue.push(element);
-        return this.queue;
-    }
-    deleteElement() {
-        return this.queue.shift();
-    }
-    showSize() {
-        return this.queue.length;
-    }
-    viewElements() {
-        return this.queue;
-    }
-}
-
 class Areas {
 
     constructor() {
@@ -195,8 +146,97 @@ class Areas {
 
 }
 
+class Conjunts {
+
+    constructor() {
+        this.unionc;
+        this.intersectionc = [];
+        this.diferencec = [];
+        this.complementc = []
+    }
+    union(conjunt1, conjunt2) {
+        this.unionc = conjunt1.concat(conjunt2);
+        return this.unionc;
+
+    }
+    intersection(conjunt1, conjunt2) {
+
+        for (let i in conjunt1) {
+            if (conjunt2.includes(conjunt1[i])) {
+                this.intersectionc.push(conjunt1[i]);
+
+            }
+        }
+        return this.intersectionc;
+    }
+    diference(conjunt1, conjunt2) {
+
+        for (let i in conjunt1) {
+            if (conjunt2.includes(conjunt1[i])) {} else {
+                this.diferencec.push(conjunt1[i]);
+            }
+        }
+        return this.diferencec;
+    }
+    complement(universal, conjunt) {
+        for (let i in universal) {
+            if (conjunt.includes(universal[i])) {} else {
+                this.complementc.push(universal[i]);
+            }
+        }
+        return this.complementc;
+    }
 
 
+}
+
+class Stack {
+
+    // Does the simulation of a stack with its methods
+
+    constructor() {
+        this.stack = []
+
+    }
+    insertNewElement(element) {
+
+        this.stack.push(element);
+        return this.stack;
+    }
+    deleteElement() {
+        this.stack.pop();
+        return this.stack;
+    }
+    showSize() {
+        return this.stack.length;
+    }
+    viewElements() {
+        return this.stack;
+    }
+
+}
+
+class Queue {
+    //Does the simulation of a queue with its methods
+    constructor() {
+        this.queue = [];
+    }
+
+    insertNewElement(element) {
+
+        this.queue.push(element);
+        return this.queue;
+    }
+    deleteElement() {
+        return this.queue.shift();
+    }
+    showSize() {
+        return this.queue.length;
+    }
+    viewElements() {
+        return this.queue;
+    }
+}
 
 
 
@@ -269,14 +309,14 @@ const binarySearch = (value, array) => {
 //Objects to export. 
 
 const ofArray = new CalcArray();
+const areaOf = new Areas();
+const ofConjunts = new Conjunts();
 const stack = new Stack()
 const queue = new Queue()
-const areaOf = new Areas();
 
 
 //Exporting all objects and functions
 
 
 
-//Testing zone.
-//Testing zone.
+//Testing zone
