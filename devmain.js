@@ -152,7 +152,8 @@ class Conjunts {
         this.unionc;
         this.intersectionc = [];
         this.diferencec = [];
-        this.complementc = []
+        this.complementc = [];
+        this.simetricDiferencec = []
     }
     union(conjunt1, conjunt2) {
         this.unionc = conjunt1.concat(conjunt2);
@@ -178,6 +179,22 @@ class Conjunts {
         }
         return this.diferencec;
     }
+    simetricDiference(conjunt1, conjunt2) {
+
+        for (let i in conjunt1) {
+            if (conjunt2.includes(conjunt1[i])) {} else {
+                this.simetricDiferencec.push(conjunt1[i]);
+            }
+        }
+        for (let i in conjunt2) {
+            if (conjunt1.includes(conjunt2[i])) {
+
+            } else {
+                this.simetricDiferencec.push(conjunt2[i]);
+            }
+        }
+        return this.simetricDiferencec;
+    }
     complement(universal, conjunt) {
         for (let i in universal) {
             if (conjunt.includes(universal[i])) {} else {
@@ -189,6 +206,8 @@ class Conjunts {
 
 
 }
+a = new Conjunts();
+console.log(a.simetricDiference([1, 3, 2], [4, 5, 3]))
 
 class Stack {
 
