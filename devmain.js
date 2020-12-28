@@ -206,9 +206,6 @@ class Conjunts {
 
 
 }
-a = new Conjunts();
-console.log(a.simetricDiference([1, 3, 2], [4, 5, 3]))
-
 class Stack {
 
     // Does the simulation of a stack with its methods
